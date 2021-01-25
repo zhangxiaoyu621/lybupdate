@@ -7,8 +7,9 @@ var TurnToRegister = () => {
 	document.getElementById('form_login_div').style.display = "none";
 }
 function regist() {
-  var BaseURL = 'http://127.0.0.1:5000 '
+  var BaseURL = 'http://127.0.0.1:5000'
    var postRequest = new XMLHttpRequest();
+   postRequest.withCredentials= true;
    postRequest.open("POST", BaseURL + '/users');
    username=document.getElementById('username').value;
    password = document.getElementById('password').value;
@@ -33,6 +34,7 @@ function regist() {
 function turnin() {
   var BaseURL = 'http://127.0.0.1:5000 '
    var postRequest = new XMLHttpRequest();
+   postRequest.withCredentials= true; 
    postRequest.open("POST", BaseURL + '/session');
    username=document.getElementById('user').value;
    password = document.getElementById('pass').value;
