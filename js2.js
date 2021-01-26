@@ -14,7 +14,7 @@ window.onload = function() {
         for(var i = 0; i <a.length; i++)
         {var b=all[i].nickname;
           var c=all[i].message;
-         document.getElementByclass("bubble_other").style.display ="block"; 
+         document.getElementByClassName("bubble_other").style.display ="block"; 
          document.getElementById("str1").innerHTML =c;        
          document.getElementById("username_other").innerHTML =b;
         }
@@ -41,7 +41,7 @@ function sub() {
         console.log(postRequest.responseText)
         confirm('发布成功！')
         var myObj = JSON.parse(postRequest.responseText);
-        document.getElementByclass("bubble_my").style.display ="block"
+        document.getElementByClassName("bubble_my").style.display ="block"
        document.getElementById("str2").innerHTML =document.getElementById('message');
        document.getElementById("username_my").innerHTML =myObj.nickname;      
        } 
