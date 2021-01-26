@@ -41,7 +41,7 @@ function sub() {
         console.log(postRequest.responseText)
         confirm('发布成功！')
         var myObj = JSON.parse(postRequest.responseText);
-        document.getElementById("bubble_my").style.display ="block"
+        document.getElementByclass("bubble_my").style.display ="block"
        document.getElementById("str2").innerHTML =document.getElementById('message');
        document.getElementById("username_my").innerHTML =myObj.nickname;      
        } 
