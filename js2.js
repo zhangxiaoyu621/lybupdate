@@ -15,8 +15,8 @@ window.onload = function() {
         {var b=all[i].nickname;
           var c=all[i].message;
          document.getElementsByClassName("bubble_other").style.display ="block"; 
-         document.getElementsById("str1").innerHTML =c;        
-         document.getElementsById("username_other").innerHTML =b;
+         document.getElementById("str1").innerHTML =c;        
+         document.getElementById("username_other").innerHTML =b;
         }
      } 
       else {alert(getRequest.responseText)
@@ -42,8 +42,8 @@ function sub() {
         confirm('发布成功！')
         var myObj = JSON.parse(postRequest.responseText);
         document.getElementsByClassName("bubble_my").style.display ="block"
-       document.getElementsById("str2").innerHTML =document.getElementById('message');
-       document.getElementsById("username_my").innerHTML =myObj.nickname;      
+       document.getElementById("str2").innerHTML =document.getElementById('message');
+       document.getElementById("username_my").innerHTML =myObj.nickname;      
        } 
         else 
        { confirm(postRequest.responseText)}
