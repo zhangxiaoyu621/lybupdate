@@ -14,9 +14,9 @@ window.onload = function() {
         for(var i = 0; i <a.length; i++)
         {var b=all[i].nickname;
           var c=all[i].message;
-         document.getElementByClassName("bubble_other").style.display ="block"; 
-         document.getElementById("str1").innerHTML =c;        
-         document.getElementById("username_other").innerHTML =b;
+         document.getElementsByClassName("bubble_other").style.display ="block"; 
+         document.getElementsById("str1").innerHTML =c;        
+         document.getElementsById("username_other").innerHTML =b;
         }
      } 
       else {alert(getRequest.responseText)
@@ -41,9 +41,9 @@ function sub() {
         console.log(postRequest.responseText)
         confirm('发布成功！')
         var myObj = JSON.parse(postRequest.responseText);
-        document.getElementByClassName("bubble_my").style.display ="block"
-       document.getElementById("str2").innerHTML =document.getElementById('message');
-       document.getElementById("username_my").innerHTML =myObj.nickname;      
+        document.getElementsByClassName("bubble_my").style.display ="block"
+       document.getElementsById("str2").innerHTML =document.getElementById('message');
+       document.getElementsById("username_my").innerHTML =myObj.nickname;      
        } 
         else 
        { confirm(postRequest.responseText)}
