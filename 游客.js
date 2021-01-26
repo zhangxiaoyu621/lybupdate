@@ -13,7 +13,7 @@ window.onload = function() {
         for(var i = 0; i <a.length; i++)
         {var b=all[i].nickname;
           var c=all[i].message;
-          document.getElementsByClassName("bubble_other").style.display ="block"; 
+          document.getElementsByClassName[i]("bubble_other").style.display ="block"; 
          document.getElementById("str1").innerHTML=c;        
          document.getElementById("username_other").innerHTML=b;
         }
