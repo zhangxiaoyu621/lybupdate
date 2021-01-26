@@ -25,14 +25,13 @@ window.onload = function() {
  }
 }
 function sub() {
-  var BaseURL = 'http://127.0.0.1:5000 '
+  var BaseURL = 'http://127.0.0.1:5000'
    var postRequest = new XMLHttpRequest();
    postRequest.withCredentials= true;
     postRequest.open("POST", BaseURL + '/message/post_message');
    message=document.getElementById('message').value;
     var postData = {
-        'message': String(message)
-        
+        'message': String(message)        
     }
    postRequest.setRequestHeader("Content-type", "application/json")
    postRequest.send(JSON.stringify(postData))
