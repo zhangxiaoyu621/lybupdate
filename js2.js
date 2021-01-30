@@ -1,6 +1,7 @@
 window.onload = function() {
   var BaseURL = 'http://127.0.0.1:5000'
-  var getRequest = new XMLHttpRequest() 
+  var getRequest = new XMLHttpRequest()
+  getRequest.withCredentials= true;
   getRequest.open('GET', BaseURL + '/users/show_all_message') 
   getRequest.send()
   getRequest.onreadystatechange = function() {
@@ -33,6 +34,7 @@ window.onload = function() {
 function sub() {
   var BaseURL = 'http://127.0.0.1:5000'
    var postRequest = new XMLHttpRequest();
+   postRequest.withCredentials= true;
    postRequest.open("POST", BaseURL + '/message/post_message');
    message=document.getElementById('message').value;
     var postData = {
