@@ -44,7 +44,7 @@
 	background-color: #D5DFF9;
 }
 .form_login input[type="button"]:hover,button:hover{
-	background-color: #5f73e9;
+	background-color: #6699CC;
 	background-image: -webkit-linear-gradient(botton,#5f73e9 0%,#859bef 100%);
 	background-image: -moz-linear-gradient(botton,#5f73e9 0%,#859bef 100%);
 	background-image: -ms-linear-gradient(botton,#5f73e9 0%,#859bef 100%);
