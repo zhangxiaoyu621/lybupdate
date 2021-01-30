@@ -1,4 +1,3 @@
-
 window.onload = function() {
   var BaseURL = 'http://127.0.0.1:5000'
   var getRequest = new XMLHttpRequest() 
@@ -48,17 +47,20 @@ function sub() {
         confirm('发布成功！')
         var myObj = JSON.parse(postRequest.responseText);
         var fatherComponent = document.getElementsByClassName('OUTBOX')[0];
-        var message = document.createElement("div");
-         message.innerHTML = `
-             <div class='bubble_my' style="display:none">
-    <div clsaa='username_my'>AJ</div>
-    <div clsaa='date2'>[日期]</div>
-    <div class='str2'>nihj</div>
-    <div class='like2'>点赞</div>
-    <div class='del'>删除留言</div>
-    <div class='re'><a href="留言修改界面.html" target="_self">修改留言</a></div>
+        var b=myObj.nickname;
+          var c=myObj.message;
+        var bub = document.createElement("div");
+         bub.innerHTML = `
+             <div class='bubble_my' style="display:block">
+                  <div class='username_my'>${b} </div>
+                  <div class='date2'>[日期]</div>
+                  <div class='str2'>${c} </div>
+                  <div class='like2'>点赞</div>
+                  <div class='del'>删除留言</div>
+                 <div class='re'><a href="留言修改界面.html" target="_self">修改留言</a></div>
   </div>
             `  
+        fatherComponent.appendChild(bub); 
     
        } 
         else 
