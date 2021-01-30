@@ -1,7 +1,7 @@
 window.onload = function() {
   var BaseURL = 'http://127.0.0.1:5000'
   var getRequest = new XMLHttpRequest()
-  getRequest.withCredentials= true;
+  getRequest.withCredentials= true; 
   getRequest.open('GET', BaseURL + '/users/show_all_message') 
   getRequest.send()
   getRequest.onreadystatechange = function() {
@@ -10,12 +10,19 @@ window.onload = function() {
      {  console.log(getRequest.responseText)
         var a = getRequest.response;
         var all = JSON.parse(getRequest.responseText);
-        for(var i = 0; i <a.length; i++)
-        {var b=all[i].nickname;
+        var fatherComponent = document.getElementsByClassName('OUTBOX')[0];
+        for(var i =0; i<a.length; i++)
+        {var b=all[i].username;
           var c=all[i].message;
-          document.getElementsByClassName[i]("bubble_other").style.display ="block"; 
-         document.getElementById("str1").innerHTML=c;        
-         document.getElementById("username_other").innerHTML=b;
+           var message = document.createElement("div");
+            message.innerHTML = `
+             <div class='bubble_other' style="display:block">
+                <div class='username_other'> ${b} </div>
+                <div class='date1'>[日期]</div>
+                <div class='str1'> ${c} </div>
+             </div>
+            `  
+            fatherComponent.appendChild(message);       
         }
      } 
       else {alert(getRequest.responseText)
