@@ -1,5 +1,5 @@
 window.onload = function() {
-  var BaseURL = 'http://127.0.0.1:5000'
+  var BaseURL = 'http：//8.129.238.142/zzj'
   var getRequest = new XMLHttpRequest()
   getRequest.withCredentials= true;
   getRequest.open('GET', BaseURL + '/users/show_all_message') 
@@ -32,7 +32,7 @@ window.onload = function() {
  }
 }
 function sub() {
-  var BaseURL = 'http://127.0.0.1:5000'
+  var BaseURL = 'http：//8.129.238.142/zzj'
    var postRequest = new XMLHttpRequest();
    postRequest.withCredentials= true;
    postRequest.open("POST", BaseURL + '/message/post_message');
