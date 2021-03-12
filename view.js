@@ -1,5 +1,5 @@
 window.onload = function() {
-  var BaseURL = 'http://127.0.0.1:5000'
+  var BaseURL = 'http：//8.129.238.142/zzj'
   var getRequest = new XMLHttpRequest()
   getRequest.withCredentials= true;
   username = document.getElementById('username')
